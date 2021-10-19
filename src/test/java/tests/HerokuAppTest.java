@@ -27,10 +27,10 @@ public class HerokuAppTest {
         driver.get("http://the-internet.herokuapp.com/inputs");
         WebElement inputField = driver.findElement(By.tagName("input"));
         inputField.sendKeys("1111");
-        String textFromInputField =  inputField.getAttribute("value");
+        String textFromInputField = inputField.getAttribute("value");
         Assert.assertEquals(textFromInputField, "1111");
-
-        driver.close();
+        driver.quit();
+        //driver.close();
 
 
     }
