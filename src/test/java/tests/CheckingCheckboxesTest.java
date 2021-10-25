@@ -21,12 +21,12 @@ public class CheckingCheckboxesTest {
         chromeOptions.addArguments("--disable-popup-blocking");
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.get("http://the-internet.herokuapp.com/checkboxes");
-        List<WebElement> checkbox = driver.findElements(By.cssSelector("[type=checkbox]"));
-        if (checkbox.get(1).isSelected() && !checkbox.get(0).isSelected()) {
-            checkbox.get(0).click();
-            assertTrue(checkbox.get(0).isSelected());
-            checkbox.get(1).click();
-            assertFalse(checkbox.get(1).isSelected());
+        List<WebElement> checkboxesList = driver.findElements(By.cssSelector("[type=checkbox]"));
+        if (checkboxesList.get(1).isSelected() && !checkboxesList.get(0).isSelected()) {
+            checkboxesList.get(0).click();
+            assertTrue(checkboxesList.get(0).isSelected());
+            checkboxesList.get(1).click();
+            assertFalse(checkboxesList.get(1).isSelected());
         }
         driver.close();
     }

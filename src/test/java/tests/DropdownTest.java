@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 public class DropdownTest {
 
     @Test
-    public void checkingCheckboxesTest() throws InterruptedException {
+    public void checkingCheckboxesTest() {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--incognito");
@@ -21,7 +21,6 @@ public class DropdownTest {
         Select select = new Select(driver.findElement(By.cssSelector("select[id*='dropdown']")));
         select.selectByValue("1");
         Assert.assertEquals(select.getOptions().get(1).getText(), "Option 1");
-        Thread.sleep(1000);
         select.selectByValue("2");
         Assert.assertEquals(select.getOptions().get(2).getText(), "Option 2");
         driver.close();
