@@ -7,7 +7,7 @@ public class ContextMenuTest extends BaseTest {
     @Test
     public void contextMenuTest() {
         contextMenuPage.openPage("http://the-internet.herokuapp.com/context_menu");
-        contextMenuPage.waitForContextMenu();
+         contextMenuPage.waitForContextMenu();
         contextMenuPage.rightClickForContextMenu();
       //  contextMenuPage.waitForPopUp();
     }

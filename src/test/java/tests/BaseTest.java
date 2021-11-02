@@ -11,7 +11,7 @@ public class BaseTest {
     ContextMenuPage contextMenuPage;
     DynamicControlsPage dynamicControlsPage;
     FileUploadPage fileUploadPage;
-    FramesPage framesPage;
+     FramesPage framesPage;
     FileDownloadPage fileDownloadPage;
 
     @BeforeMethod

@@ -6,7 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class ContextMenuPage extends BasePage {
 
-    public ContextMenuPage(WebDriver driver) {
+     public  ContextMenuPage(WebDriver driver) {
         super(driver);
     }
 

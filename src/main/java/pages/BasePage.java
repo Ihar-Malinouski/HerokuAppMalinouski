@@ -19,7 +19,7 @@ public class BasePage {
         driver.get(url);
     }
 
-    public void waitForElementlocated(By element, int timeout) {
+    public  void waitForElementlocated(By element, int timeout) {
         wait = new WebDriverWait(driver, timeout);
         wait.until(ExpectedConditions.visibilityOfElementLocated(element));
     }

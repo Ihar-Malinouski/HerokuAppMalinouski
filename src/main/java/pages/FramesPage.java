@@ -14,7 +14,7 @@ public class FramesPage extends BasePage {
 
 
     public void transitionToIframe() {
-        driver.switchTo().frame(driver.findElement(IFRAME_WINDOW));
+         driver.switchTo().frame(driver.findElement(IFRAME_WINDOW));
     }
 
     public void outOfFrame() {
