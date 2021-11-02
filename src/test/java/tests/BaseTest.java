@@ -3,6 +3,7 @@ package tests;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.*;
 
@@ -11,8 +12,7 @@ public class BaseTest {
     ContextMenuPage contextMenuPage;
     DynamicControlsPage dynamicControlsPage;
     FileUploadPage fileUploadPage;
-     FramesPage framesPage;
-    FileDownloadPage fileDownloadPage;
+    FramesPage framesPage;
 
     @BeforeMethod
     public void initTest() {
@@ -23,11 +23,11 @@ public class BaseTest {
         dynamicControlsPage = new DynamicControlsPage(driver);
         fileUploadPage = new FileUploadPage(driver);
         framesPage = new FramesPage(driver);
-        fileDownloadPage = new FileDownloadPage(driver);
     }
 
-//    @AfterMethod
-//    public void closeDriver() {
-//        driver.quit();
-//    }
+
+    @AfterMethod
+    public void closeDriver() {
+        driver.quit();
+    }
 }
