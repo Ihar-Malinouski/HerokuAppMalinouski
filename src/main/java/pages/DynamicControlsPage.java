@@ -15,7 +15,7 @@ public class DynamicControlsPage extends BasePage {
     private static final By ENABLE_BUTTON_CLICK = By.xpath("//*[@id='input-example']//button");
 
 
-    public void checkboxVisibility() {
+     public void checkboxVisibility() {
         driver.findElement(CHECKBOX).isDisplayed();
     }
 

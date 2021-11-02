@@ -14,7 +14,7 @@ public class ContextMenuPage extends BasePage {
     private static final By ALERT_POP_UP_OPEN = By.xpath("//*[@id='content']/script");
     private static final String TEXT_ALERT = "//*[@id='content']/script";
 
-    public void waitForContextMenu() {
+     public void waitForContextMenu() {
         waitForElementlocated(CLICK_CONTEXT_MENU, 10);
     }
 

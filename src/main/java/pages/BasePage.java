@@ -11,7 +11,7 @@ public class BasePage {
     WebDriver driver;
     WebDriverWait wait;
 
-    BasePage(WebDriver driver) {
+     BasePage(WebDriver driver) {
         this.driver = driver;
     }
 

@@ -13,7 +13,7 @@ public class FramesPage extends BasePage {
     private static final String TEXT_INSIDE_IN_FRAME = "//*[@id='tinymce']//p";
 
 
-    public void transitionToIframe() {
+     public void transitionToIframe() {
          driver.switchTo().frame(driver.findElement(IFRAME_WINDOW));
     }
 
