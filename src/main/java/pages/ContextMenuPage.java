@@ -6,7 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class ContextMenuPage extends BasePage {
 
-     public  ContextMenuPage(WebDriver driver) {
+    public ContextMenuPage(WebDriver driver) {
         super(driver);
     }
 
@@ -18,8 +18,12 @@ public class ContextMenuPage extends BasePage {
     }
 
     public void rightClickForContextMenu() {
-        Actions actions= new Actions(driver);
-        actions.contextClick(driver.findElement(CLICK_CONTEXT_MENU));
+        Actions actions = new Actions(driver);
+        actions.contextClick(driver.findElement(CLICK_CONTEXT_MENU)).build().perform();
+    }
+
+    public void waitForPopUp() {
+        waitForAlertIsPresent(ALERT_POP_UP_OPEN, 10);
     }
 
     public String getAlertText() {

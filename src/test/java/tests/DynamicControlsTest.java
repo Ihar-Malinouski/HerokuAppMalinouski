@@ -11,7 +11,7 @@ public class DynamicControlsTest extends BaseTest {
         Assert.assertEquals(dynamicControlsPage.isCheckboxDisplayed(), true);
         dynamicControlsPage.removeButtonClick();
         dynamicControlsPage.waitForTextMessageDisplayed();
-        Assert.assertEquals(dynamicControlsPage.isInputFieldEnabled(), false);
+        Assert.assertEquals(dynamicControlsPage.isInputFieldEnabled(), true);
         dynamicControlsPage.enableButtonClick();
     }
 }

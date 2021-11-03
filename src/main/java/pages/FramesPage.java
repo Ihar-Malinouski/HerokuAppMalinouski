@@ -14,7 +14,7 @@ public class FramesPage extends BasePage {
 
 
     public void switchToFrame() {
-         driver.switchTo().frame(driver.findElement(IFRAME_WINDOW));
+        driver.switchTo().frame(driver.findElement(IFRAME_WINDOW));
     }
 
     public void switchToDefaultContent() {

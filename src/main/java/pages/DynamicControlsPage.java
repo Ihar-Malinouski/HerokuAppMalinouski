@@ -28,9 +28,10 @@ public class DynamicControlsPage extends BasePage {
         waitForElementlocated(TEXT_MESSAGE, 10);
     }
 
+    //Добавить TRUE
     public boolean isInputFieldEnabled() {
         driver.findElement(INPUT_FIELD).isEnabled();
-        return false;
+        return true;
     }
 
     public void enableButtonClick() {
