@@ -1,12 +1,13 @@
 package tests;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class FramesTest extends BaseTest {
 
     @Test
-    public void FrameTest() {
+     public void FrameTest() {
         framesPage.openPage("http://the-internet.herokuapp.com/frames");
         framesPage.waitForPageLoader();
         framesPage.clickByLinkToTheFrame();
