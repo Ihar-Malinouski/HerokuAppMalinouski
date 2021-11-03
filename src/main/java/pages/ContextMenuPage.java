@@ -12,7 +12,7 @@ public class ContextMenuPage extends BasePage {
 
     private static final By CLICK_CONTEXT_MENU = By.xpath("//*[@id='hot-spot']");
     private static final By ALERT_POP_UP_OPEN = By.xpath("//*[@id='content']/script");
-    private static final String TEXT_ALERT = "//*[@id='content']/script";
+ //   private static final String TEXT_ALERT = "//*[@id='content']/script";
 
     public void waitForContextMenu() {
         waitForElementlocated(CLICK_CONTEXT_MENU, 10);
@@ -24,14 +24,14 @@ public class ContextMenuPage extends BasePage {
     }
 
     public void waitForPopUp() {
-        waitForElementPopUp(ALERT_POP_UP_OPEN, 10);
+        waitForAlertIsPresent(ALERT_POP_UP_OPEN, 10);
     }
 
-    public String textWithnAlert() {
+    public String getAlertText() {
         return driver.switchTo().alert().getText();
     }
 
-    public void closeAlertToButtonCllick() {
+    public void closeAlert() {
         driver.switchTo().alert().accept();
     }
 }

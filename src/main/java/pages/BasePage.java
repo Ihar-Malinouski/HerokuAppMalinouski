@@ -24,7 +24,7 @@ public class BasePage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
 
-    public void waitForElementPopUp(By alertPopUpOpen, int i) {
+    public void waitForAlertIsPresent(By alertPopUpOpen, int i) {
         wait = new WebDriverWait(driver, i);
         wait.until(ExpectedConditions.alertIsPresent());
     }

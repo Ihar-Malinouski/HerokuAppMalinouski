@@ -11,7 +11,7 @@ public class ContextMenuTest extends BaseTest {
         contextMenuPage.waitForContextMenu();
         contextMenuPage.rightClickForContextMenu();
         contextMenuPage.waitForPopUp();
-        Assert.assertEquals(contextMenuPage.textWithnAlert(), "You selected a context menu");
-        contextMenuPage.closeAlertToButtonCllick();
+        Assert.assertEquals(contextMenuPage.getAlertText(), "You selected a context menu");
+        contextMenuPage.closeAlert();
     }
 }

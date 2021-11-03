@@ -15,33 +15,25 @@ public class DynamicControlsPage extends BasePage {
     private static final By ENABLE_BUTTON_CLICK = By.xpath("//*[@id='input-example']//button");
 
 
-    public void checkboxVisibility() {
+    public boolean isCheckboxDisplayed() {
         driver.findElement(CHECKBOX).isDisplayed();
+        return true;
     }
 
     public void removeButtonClick() {
         driver.findElement(REMOVE_BUTTON_CLICK).click();
     }
 
-    public void waitForText() {
+    public void waitForTextMessageDisplayed() {
         waitForElementlocated(TEXT_MESSAGE, 10);
     }
 
-    public void inputVisibility() {
+    public boolean isInputFieldEnabled() {
         driver.findElement(INPUT_FIELD).isEnabled();
+        return false;
     }
 
     public void enableButtonClick() {
         driver.findElement(ENABLE_BUTTON_CLICK).click();
     }
-
-    public void enableButtonClick123() {
-        driver.findElement(INPUT_FIELD).getAttribute("type");
-
-    }
-
-//    public List<WebElement> inputVisibility() {
-//        List<WebElement> inputFieldList = driver.findElements(INPUT_FIELD);
-//        return inputFieldList;
-//    }
 }

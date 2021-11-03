@@ -13,11 +13,11 @@ public class FramesPage extends BasePage {
     private static final String TEXT_INSIDE_IN_FRAME = "//*[@id='tinymce']//p";
 
 
-    public void transitionToIframe() {
+    public void switchToFrame() {
          driver.switchTo().frame(driver.findElement(IFRAME_WINDOW));
     }
 
-    public void outOfFrame() {
+    public void switchToDefaultContent() {
         driver.switchTo().defaultContent();
     }
 
@@ -29,7 +29,7 @@ public class FramesPage extends BasePage {
         waitForElementlocated(IFRAME_WINDOW, 10);
     }
 
-    public String textWithnAIframe(){
+    public String getTextWithinIframe(){
         return driver.findElement(By.xpath(String.format(TEXT_INSIDE_IN_FRAME))).getText();
     }
 }
